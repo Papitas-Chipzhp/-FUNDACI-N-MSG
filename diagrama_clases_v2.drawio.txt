@@ -1,0 +1,37 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="class-v2" name="Diagrama de Clases v2">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Clases Existentes simplificadas -->
+        <mxCell id="c_mortgage" value="Mortgage" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;" vertex="1" parent="1"><mxGeometry x="40" y="40" width="160" height="80" as="geometry" /></mxCell>
+        <mxCell id="c_investment" value="Investment" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;" vertex="1" parent="1"><mxGeometry x="240" y="40" width="160" height="80" as="geometry" /></mxCell>
+        <mxCell id="c_expense" value="OperatingExpense" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;" vertex="1" parent="1"><mxGeometry x="440" y="40" width="160" height="80" as="geometry" /></mxCell>
+        
+        <!-- Nuevas Clases -->
+        <mxCell id="c_aporte" value="AporteAnual&#10;--&#10;- idAporte: int&#10;- anio: int&#10;- montoTotal: double&#10;- saldoDisponible: double&#10;--&#10;+ registrarAporte()&#10;+ descontarFondo()" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="40" y="200" width="200" height="150" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c_estudiante" value="Estudiante&#10;--&#10;- idEstudiante: int&#10;- nombre: String&#10;- programaEstudio: String&#10;--&#10;+ solicitarBeca()&#10;+ registrarNotas()" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="560" y="200" width="200" height="150" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c_beca" value="BecaCredito&#10;--&#10;- idBeca: int&#10;- semestre: String&#10;- montoMatricula: double&#10;- estado: String&#10;--&#10;+ otorgar()&#10;+ condonar()&#10;+ solicitarDevolucion()" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="300" y="200" width="210" height="160" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c_notas" value="RegistroNotas&#10;--&#10;- idRegistro: int&#10;- promedioSemestre: double&#10;- fechaPresentacion: Date&#10;--&#10;+ esAprobatoria(): boolean" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="300" y="420" width="210" height="130" as="geometry" />
+        </mxCell>
+
+        <!-- Relaciones -->
+        <mxCell id="r1" style="endArrow=diamond;endFill=1;html=1;entryX=0;entryY=0.5;" edge="1" parent="1" source="c_aporte" target="c_beca"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="r2" style="endArrow=none;html=1;entryX=1;entryY=0.5;" edge="1" parent="1" source="c_estudiante" target="c_beca"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="r3" style="endArrow=diamond;endFill=1;html=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="c_beca" target="c_notas"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

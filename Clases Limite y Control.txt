@@ -1,0 +1,51 @@
+4. LISTA DE CLASES LIMITE Y CONTROL (ANALISIS BCE)
+
+==================================================
+CLASES LIMITE (BOUNDARY)
+==================================================
+Representan las interfaces de interaccion entre los actores (usuarios o sistemas externos) y el sistema MSGF.
+
+1. InterfazAporteAnual
+- Actor / Origen: MSG Staff Member
+- Descripcion: Permite registrar el monto del aporte recibido anualmente para el fondo de becas[cite: 2].
+
+2. InterfazSolicitudBeca
+- Actor / Origen: MSG Staff Member / Estudiante
+- Descripcion: Formulario para gestionar y otorgar la beca-credito semestral a los estudiantes[cite: 2].
+
+3. InterfazRegistroNotas
+- Actor / Origen: Estudiante / MSG Staff Member
+- Descripcion: Interfaz donde se registran las calificaciones obtenidas al finalizar el semestre[cite: 2].
+
+4. InterfazGestionHipoteca
+- Actor / Origen: MSG Staff Member / Borrowers
+- Descripcion: Formulario para la administracion y consulta de hipotecas[cite: 1].
+
+5. InterfazGestionInversion
+- Actor / Origen: MSG Staff Member
+- Descripcion: Pantalla para la gestion y seguimiento de inversiones de la fundacion[cite: 1].
+
+6. InterfazReporteFondos
+- Actor / Origen: MSG Staff Member
+- Descripcion: Visor de reportes semanales y estimacion de fondos disponibles[cite: 1].
+
+
+==================================================
+CLASES DE CONTROL (CONTROL)
+==================================================
+Gestionan el flujo de trabajo, ejecutan las reglas de negocio y coordinan la interaccion entre las clases limite y las entidades.
+
+1. ControladorAportes
+- Responsabilidad Principal: Registra el ingreso del aporte anual y actualiza el saldo global del fondo de becas[cite: 2].
+
+2. ControladorBecaCredito
+- Responsabilidad Principal: Coordina la asignacion semestral de las becas-credito a los estudiantes seleccionados[cite: 2].
+
+3. ControladorEvaluacionCondonacion
+- Responsabilidad Principal: Evalua las notas presentadas y decide si el valor de la matricula se condona o si se cobra al estudiante[cite: 2].
+
+4. ControladorEstimacionFondos
+- Responsabilidad Principal: Calcula la disponibilidad semanal integrando hipotecas, inversiones, gastos operativos y desembolsos/reembolsos de becas[cite: 1, 2].
+
+5. ControladorReportes
+- Responsabilidad Principal: Procesa y consolida la informacion requerida para la generacion de informes ejecutivos[cite: 1].

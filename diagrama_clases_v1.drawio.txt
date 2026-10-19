@@ -1,0 +1,40 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="class-v1" name="Diagrama de Clases v1">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Clase Mortgage -->
+        <mxCell id="c_mortgage" value="Mortgage&#10;--&#10;- mortgageId: int&#10;- borrowerName: String&#10;- principalAmount: double&#10;- weeklyPayment: double&#10;- balance: double&#10;--&#10;+ updateBalance()&#10;+ getWeeklyPayment()" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="80" width="200" height="150" as="geometry" />
+        </mxCell>
+
+        <!-- Clase Investment -->
+        <mxCell id="c_investment" value="Investment&#10;--&#10;- investmentId: int&#10;- investmentType: String&#10;- principalAmount: double&#10;- expectedReturn: double&#10;--&#10;+ calculateReturn()&#10;+ updateInvestment()" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="80" width="200" height="150" as="geometry" />
+        </mxCell>
+
+        <!-- Clase OperatingExpense -->
+        <mxCell id="c_expense" value="OperatingExpense&#10;--&#10;- expenseId: int&#10;- description: String&#10;- annualAmount: double&#10;--&#10;+ updateExpense()&#10;+ getAnnualTotal()" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="80" width="200" height="150" as="geometry" />
+        </mxCell>
+
+        <!-- Clase WeeklyEstimate -->
+        <mxCell id="c_estimate" value="WeeklyEstimate&#10;--&#10;- estimateId: int&#10;- weekDate: Date&#10;- availableFunds: double&#10;--&#10;+ calculateWeeklyFunds()&#10;+ generateReport()" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="300" width="200" height="140" as="geometry" />
+        </mxCell>
+
+        <mxCell id="rel1" style="endArrow=open;endSize=12;html=1;entryX=0;entryY=0.5;" edge="1" parent="1" source="c_mortgage" target="c_estimate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel2" style="endArrow=open;endSize=12;html=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="c_investment" target="c_estimate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel3" style="endArrow=open;endSize=12;html=1;entryX=1;entryY=0.5;" edge="1" parent="1" source="c_expense" target="c_estimate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

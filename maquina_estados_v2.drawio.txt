@@ -1,0 +1,27 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="sm-v2" name="Máquina de Estados BecaCredito v2">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="start" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;" vertex="1" parent="1"><mxGeometry x="40" y="100" width="30" height="30" as="geometry" /></mxCell>
+
+        <mxCell id="st1" value="Otorgada" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="120" y="90" width="110" height="50" as="geometry" /></mxCell>
+        <mxCell id="st2" value="En Evaluación de Notas" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="290" y="90" width="150" height="50" as="geometry" /></mxCell>
+        <mxCell id="st3" value="Condonada" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="500" y="40" width="120" height="50" as="geometry" /></mxCell>
+        <mxCell id="st4" value="Por Devolver (Deuda)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1"><mxGeometry x="500" y="150" width="140" height="50" as="geometry" /></mxCell>
+        <mxCell id="st5" value="Saldada / Reembolsada" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="690" y="150" width="150" height="50" as="geometry" /></mxCell>
+
+        <mxCell id="end" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;" vertex="1" parent="1"><mxGeometry x="740" y="50" width="30" height="30" as="geometry" /></mxCell>
+
+        <mxCell id="t1" value="asignarSemestre()" style="endArrow=classic;html=1;" edge="1" parent="1" source="start" target="st1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="t2" value="presentarNotas()" style="endArrow=classic;html=1;" edge="1" parent="1" source="st1" target="st2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="t3" value="promedioSuficiente()" style="endArrow=classic;html=1;entryX=0;entryY=0.5;" edge="1" parent="1" source="st2" target="st3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="t4" value="promedioInsuficiente()" style="endArrow=classic;html=1;entryX=0;entryY=0.5;" edge="1" parent="1" source="st2" target="st4"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="t5" value="pagarMatricula()" style="endArrow=classic;html=1;" edge="1" parent="1" source="st4" target="st5"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="t6" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="st3" target="end"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
